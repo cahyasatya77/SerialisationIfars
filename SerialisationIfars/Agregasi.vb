@@ -47,6 +47,8 @@ Public Class Agregasi
     Sub comboBoxBatch()
         Call KoneksiOracle()
         'Dim str As String
+        cmbBatch.Items.Clear()
+
         cmdOracle = connOracle.CreateCommand
         cmdOracle.CommandText = "select DECODE(GBH.BATCH_STATUS,1,'Pending','WIP') BATCH_STATUS
                     ,substr(msib.SEGMENT1,3) SEGMENT1
@@ -85,7 +87,7 @@ Public Class Agregasi
                     ,MLN.EXPIRATION_DATE"
         cmdOracle.CommandType = CommandType.Text
         Dim segment1 As OracleParameter
-        kd_produk = "DSYUS213"
+        'kd_produk = "DSYUS213"
         segment1 = New OracleParameter("SEGMENT1", kd_produk)
         cmdOracle.Parameters.Clear()
         cmdOracle.Parameters.Add(segment1)
@@ -542,7 +544,10 @@ Public Class Agregasi
             cmbProduk.Enabled = True
             cmbBatch.Enabled = True
             txtJmlDus.Enabled = True
+            btnStart.Enabled = True
             btnStop.Enabled = False
+            txtKarton.Enabled = False
+            btnKarton.Enabled = False
             PictureBox1.Image = Nothing
         End If
     End Sub
