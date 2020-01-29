@@ -6,7 +6,7 @@ Sebelum running coding aplikasi, perlu untuk install :
 1. MySql : sebagai database inti penyimpanan data pada local server
 2. Oracle E-Business suite : sebagai acuan input data dari database server perusahaan.
 
-Untuk menjalan kan aplikasi ini, perlu menambahakan beberapa Refences pada projet,
+Untuk menjalan kan aplikasi ini, perlu menambahakan beberapa References pada project,
 Yaitu : 
 
 1. MySql.Data : library yang akan menghubungkan antara database MySql dan VB.NET
