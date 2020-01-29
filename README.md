@@ -13,5 +13,5 @@ Yaitu :
 2. Oracle.ManagedDataAccess : library yang akan menghubungkan antara database Oracle dan VB.NET
 3. QRCoder : library untuk melakukan generate qr code
 
-Agar dapat berjalan lancar.
+Semoga berjalan lancar.
 Thanks you. 😁
