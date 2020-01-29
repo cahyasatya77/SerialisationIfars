@@ -4,7 +4,7 @@ Membuat aplikasi serialisasi dengan VB.NET, dengan koneksi oracle EBS database d
 Sebelum running coding aplikasi, perlu untuk install :
 
 1. MySql : sebagai database inti penyimpanan data pada local server
-2. Oracle E-Bussiness suite : sebagai acuan input data dari database server perusahaan.
+2. Oracle E-Business suite : sebagai acuan input data dari database server perusahaan.
 
 Untuk menjalan kan aplikasi ini, perlu menambahakan beberapa Refences pada projet,
 Yaitu : 
