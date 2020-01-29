@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MenuUtama
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,12 +20,13 @@ Partial Class MenuUtama
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.AgregasiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KoneksiDatabaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DatabaseConnectionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PLCToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -46,7 +47,7 @@ Partial Class MenuUtama
         '
         'KoneksiDatabaseToolStripMenuItem
         '
-        Me.KoneksiDatabaseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DatabaseConnectionToolStripMenuItem})
+        Me.KoneksiDatabaseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DatabaseConnectionToolStripMenuItem, Me.PLCToolStripMenuItem})
         Me.KoneksiDatabaseToolStripMenuItem.Name = "KoneksiDatabaseToolStripMenuItem"
         Me.KoneksiDatabaseToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
         Me.KoneksiDatabaseToolStripMenuItem.Text = "Setting"
@@ -56,6 +57,12 @@ Partial Class MenuUtama
         Me.DatabaseConnectionToolStripMenuItem.Name = "DatabaseConnectionToolStripMenuItem"
         Me.DatabaseConnectionToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.DatabaseConnectionToolStripMenuItem.Text = "Database Connection"
+        '
+        'PLCToolStripMenuItem
+        '
+        Me.PLCToolStripMenuItem.Name = "PLCToolStripMenuItem"
+        Me.PLCToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.PLCToolStripMenuItem.Text = "PLC"
         '
         'MenuUtama
         '
@@ -79,4 +86,5 @@ Partial Class MenuUtama
     Friend WithEvents KoneksiDatabaseToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DatabaseConnectionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AgregasiToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PLCToolStripMenuItem As ToolStripMenuItem
 End Class

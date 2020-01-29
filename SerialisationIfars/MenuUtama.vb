@@ -13,4 +13,9 @@
         Agregasi.Show()
         Agregasi.MdiParent = Me
     End Sub
+
+    Private Sub PLCToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PLCToolStripMenuItem.Click
+        SettingPLC.Show()
+        SettingPLC.MdiParent = Me
+    End Sub
 End Class

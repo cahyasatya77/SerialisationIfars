@@ -95,6 +95,12 @@
     <Compile Include="DatabaseConnection.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SettingPLC.Designer.vb">
+      <DependentUpon>SettingPLC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SettingPLC.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MenuUtama.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DatabaseConnection.resx">
       <DependentUpon>DatabaseConnection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingPLC.resx">
+      <DependentUpon>SettingPLC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuUtama.resx">
       <DependentUpon>MenuUtama.vb</DependentUpon>

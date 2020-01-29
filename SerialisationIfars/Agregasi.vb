@@ -440,7 +440,7 @@ Public Class Agregasi
                                         Dim gen As New QRCodeGenerator
                                         Dim dataQr = gen.CreateQrCode(urutan, QRCodeGenerator.ECCLevel.Q)
                                         Dim codeQrKarton As New QRCode(dataQr)
-                                        PictureBox1.Image = codeQrKarton.GetGraphic(6)
+                                        PictureBox1.Image = codeQrKarton.GetGraphic(3)
 
                                         printDoc.Print()
 
