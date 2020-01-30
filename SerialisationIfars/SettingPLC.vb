@@ -49,7 +49,7 @@
         'Check the FCS of the return information. if they are not the same then an error has occurred.
         Call GetFCS()
         If FCS <> fcs_rxd Then
-            RXD = "Communcate error"
+            RXD = "Communicate Error"
         End If
     End Sub
 
@@ -68,7 +68,7 @@
         If RXD.Substring(5, 2) = "00" Then
             lblReadDM.Text = RXD.Substring(7, 4)
         End If
-        'set status PLC omron and open again connection serial port
+        'look status PLC omron and open again connection serial port
         If SerialPort1.IsOpen = False Then
             SerialPort1.Open()
         End If

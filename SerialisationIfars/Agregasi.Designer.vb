@@ -47,11 +47,19 @@ Partial Class Agregasi
         Me.txtKarton = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
+        Me.TimerPLC = New System.Windows.Forms.Timer(Me.components)
+        Me.Waktu = New System.Windows.Forms.Label()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.lblKonveyor = New System.Windows.Forms.Label()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox5.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnStart
@@ -192,7 +200,7 @@ Partial Class Agregasi
         Me.GroupBox2.Controls.Add(Me.btnStart)
         Me.GroupBox2.Location = New System.Drawing.Point(594, 29)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(137, 152)
+        Me.GroupBox2.Size = New System.Drawing.Size(137, 102)
         Me.GroupBox2.TabIndex = 8
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Action"
@@ -233,7 +241,7 @@ Partial Class Agregasi
         Me.lblHasil.AutoSize = True
         Me.lblHasil.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.lblHasil.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHasil.Location = New System.Drawing.Point(25, 371)
+        Me.lblHasil.Location = New System.Drawing.Point(6, 28)
         Me.lblHasil.Name = "lblHasil"
         Me.lblHasil.Size = New System.Drawing.Size(177, 31)
         Me.lblHasil.TabIndex = 10
@@ -281,14 +289,68 @@ Partial Class Agregasi
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
         '
+        'SerialPort1
+        '
+        Me.SerialPort1.DataBits = 7
+        Me.SerialPort1.Parity = System.IO.Ports.Parity.Even
+        Me.SerialPort1.PortName = "COM3"
+        '
+        'TimerPLC
+        '
+        Me.TimerPLC.Enabled = True
+        '
+        'Waktu
+        '
+        Me.Waktu.AutoSize = True
+        Me.Waktu.Location = New System.Drawing.Point(28, 240)
+        Me.Waktu.Name = "Waktu"
+        Me.Waktu.Size = New System.Drawing.Size(64, 13)
+        Me.Waktu.TabIndex = 13
+        Me.Waktu.Text = "Date / Time"
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.lblKonveyor)
+        Me.GroupBox5.Location = New System.Drawing.Point(594, 138)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(137, 73)
+        Me.GroupBox5.TabIndex = 14
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Status Konveyor"
+        '
+        'lblKonveyor
+        '
+        Me.lblKonveyor.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblKonveyor.BackColor = System.Drawing.Color.Red
+        Me.lblKonveyor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblKonveyor.Location = New System.Drawing.Point(7, 27)
+        Me.lblKonveyor.Name = "lblKonveyor"
+        Me.lblKonveyor.Size = New System.Drawing.Size(124, 29)
+        Me.lblKonveyor.TabIndex = 0
+        Me.lblKonveyor.Text = "STOP"
+        Me.lblKonveyor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.lblHasil)
+        Me.GroupBox6.Location = New System.Drawing.Point(31, 371)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(328, 92)
+        Me.GroupBox6.TabIndex = 15
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "Status Tersimpan"
+        '
         'Agregasi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(793, 497)
+        Me.Controls.Add(Me.GroupBox6)
+        Me.Controls.Add(Me.GroupBox5)
+        Me.Controls.Add(Me.Waktu)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox4)
-        Me.Controls.Add(Me.lblHasil)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -302,6 +364,9 @@ Partial Class Agregasi
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -331,4 +396,10 @@ Partial Class Agregasi
     Friend WithEvents cmbBatch As ComboBox
     Friend WithEvents Timer1 As Timer
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents SerialPort1 As IO.Ports.SerialPort
+    Friend WithEvents TimerPLC As Timer
+    Friend WithEvents Waktu As Label
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents lblKonveyor As Label
+    Friend WithEvents GroupBox6 As GroupBox
 End Class
