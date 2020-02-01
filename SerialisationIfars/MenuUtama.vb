@@ -12,6 +12,7 @@
     Private Sub MenuUtama_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Agregasi.Show()
         Agregasi.MdiParent = Me
+        'MsgBox("user login : " & LoginInfo.UserID, MsgBoxStyle.Information)
     End Sub
 
     Private Sub PLCToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PLCToolStripMenuItem.Click
