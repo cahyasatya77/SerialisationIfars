@@ -23,6 +23,7 @@ Partial Class Agregasi
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Agregasi))
         Me.btnStart = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cmbBatch = New System.Windows.Forms.ComboBox()
@@ -354,6 +355,7 @@ Partial Class Agregasi
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Agregasi"
         Me.Text = "Agregasi"
         Me.GroupBox1.ResumeLayout(False)

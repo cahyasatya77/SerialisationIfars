@@ -19,4 +19,9 @@
         SettingPLC.Show()
         SettingPLC.MdiParent = Me
     End Sub
+
+    Private Sub timerMenuUtama_Tick(sender As Object, e As EventArgs) Handles timerMenuUtama.Tick
+        'Display Date Time in aplication
+        lblTime.Text = Format(System.DateTime.Now, "dd MMMM yyyy HH:mm:ss")
+    End Sub
 End Class
